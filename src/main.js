@@ -6,7 +6,10 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 const scene = new THREE.Scene();
 // Create our Sphere
 const geometry = new THREE.SphereGeometry(3, 64, 64);
-const material = new THREE.MeshStandardMaterial({ color: "#00ff83",roughness:0.3 });
+const material = new THREE.MeshStandardMaterial({
+  color: "#00ff83",
+  roughness: 0.3,
+});
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 // sizes
@@ -129,7 +132,7 @@ radiusDec.addEventListener("click", () => {
     mesh.scale.y = 0.1;
     mesh.scale.z = 0.1;
   }
-})
+});
 // Rotation control
 let rotate = document.getElementById("toggle");
 rotate.addEventListener("click", () => {
